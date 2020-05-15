@@ -1,0 +1,31 @@
+# Modifying and pushing
+1) git clone <repo>
+2) echo "some matter in the file" > file.txt
+3) git add file.txt
+4) git commit -m "committed successfully"
+5) git push -u origin master
+6) git status
+
+# Other Git commands
+1) touch file.txt #creates file
+2) git rm file.txt #removes file
+3) git log --oneline #prev history
+4) git hash-objevt file.txt # prints sha-1 for content in file
+5) git show HEAD
+6) git branch #shows all branches (branch with * in front is current working branch)
+7) git branch feature #created branched named feature
+8) git checkout feature #current working branch switched to feature i.e, HEAD is now pointing to feature
+7+8) git checkout -b feature #creates new branch feature and * points to this new branch
+9) git branch -d feature #feature branch is deleted
+10) git merge feature #merges feature branch into master (assuming you have typed git checout master earlier, so that * goes before master)
+11) git branch --all #shows tracking branches
+12) git fetch repo #updates current repo
+13) git pull = git fetch + git merge
+14) git commit --ammend -m "new message" use this for git commit -m "old message" i.e if there is any typo
+
+
+# Other Info
+1) Branches are in .git-->refs-->headers
+2) cat <branch_name> shows SHA-1 of the latest commit in that branch_name
+3) cat HEAD(which is in .git) points to latest commit brannch. So, HEAD is unique in a repo
+4) Rebase means parallel commits (2 diff persons working) to sequential
